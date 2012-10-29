@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="well photo-container">
+    <dl class="photo-info dl-horizontal">
+      <dt>Name</dt>
+      <dd>{{ image.name }}</dd>
+    </dl>
+    <img src="{{ image.raw_url }}">
+  </div>
+{% endblock %}

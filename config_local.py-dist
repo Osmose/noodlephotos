@@ -1,0 +1,12 @@
+import os
+
+
+BASE_DIR = os.path.dirname(__file__)
+
+
+def path(*paths):
+    return os.path.join(BASE_DIR, *paths)
+
+
+PHOTO_DIR = path('media', 'photos')
+THUMBNAIL_DIR = path('media', 'thumbnails')

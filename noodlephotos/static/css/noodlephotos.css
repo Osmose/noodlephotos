@@ -1,0 +1,43 @@
+.container {
+    margin-top: 10px;
+}
+
+.thumbnail .name {
+    text-align: center;
+}
+
+.photo-container {
+    overflow: auto;
+    padding-top: 60px;
+    position: relative;
+    text-align: center;
+}
+
+.photo-info {
+    background: #FFF;
+    border-bottom: 1px solid #DDD;
+    left: 0;
+    margin: 0;
+    height: 20px;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 0;
+}
+
+.photo-info :after {
+    content: "Photo";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da0a4;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}

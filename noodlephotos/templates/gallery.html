@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <ul class="thumbnails">
+    {% for item in items %}
+      <li class="span2">
+        <a class="thumbnail" href="{{ item.public_url }}">
+          {{ item.preview_html }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

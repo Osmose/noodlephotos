@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>NoodlePhotos</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/noodlephotos.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <nav class="navbar">
+            <div class="navbar-inner">
+              <a class="brand" href="#">NoodlePhotos</a>
+            </div>
+          </nav>
+          <ul class="breadcrumb">
+            {% for item in breadcrumb %}
+              <li>
+                <a href="{{ item.public_url }}" {% if loop.last %}class="active"{% endif %}>
+                  {{ item.name }}
+                </a>
+                {% if not loop.last %}
+                  <span class="divider">/</span>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          {% block content %}{% endblock %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
